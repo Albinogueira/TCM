@@ -6,4 +6,4 @@ Please, create a pull request for validation and to make a merge to master.
 
 **Observation:**
 
-If you are using ubuntu, execute this command `sudo apt install php7.0-dom php7.0-mbstring` before `compose install`
+If you are using ubuntu, execute this command `sudo apt install php-dom php-mbstring` before `compose install`
