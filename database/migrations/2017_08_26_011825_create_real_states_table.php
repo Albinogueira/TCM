@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRealstateTable extends Migration
+class CreateRealStatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRealstateTable extends Migration
      */
     public function up()
     {
-        Schema::create('realstate', function (Blueprint $table) {
+        Schema::create('real_states', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('company', 1000)->comment('Razão Social');
             $table->string('trading_name', 1000)->comment('Nome Fantasia');
@@ -36,6 +36,6 @@ class CreateRealstateTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('realstate');
+        Schema::dropIfExists('real_states');
     }
 }
