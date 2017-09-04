@@ -12,5 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+Route::middleware('auth')->group(function(){
+
+    Route::resource('residences', 'ResidenceController');
+    Route::resource('realStates', 'RealStateController');
+    Route::resource('residenceTypes', 'ResidenceTypeController');
+});
+Route::resource('people', 'PeopleController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
